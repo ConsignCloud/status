@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link rel="shortcut icon" href="/favicon.ico?v1">
+    <title>ConsignCloud Status</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
+
+      html, body, div, span, h1, h2, h3, h4, h5, h6, p, a,
+      table, caption, tbody, tfoot, thead, tr, th, td {
+      	margin: 0;
+      	padding: 0;
+      	border: 0;
+      	vertical-align: baseline;
+      }
+
+      body {
+      	line-height: 1;
+      }
+
+      table {
+      	border-collapse: collapse;
+      	border-spacing: 0;
+      }
+
+      body {
+        font-family: 'Montserrat', sans-serif;
+        color: #0c2028;
+      }
+
+      .header {
+        color: white;
+        padding: 2rem;
+        background: linear-gradient(90deg, #8692cc, rgba(134, 146, 206, 0.5));
+        box-shadow: 0 2px 5px #ccc;
+      }
+
+      .brand-icon {
+        width: 24px;
+        position: relative;
+        margin-top: -12px;
+        top: 4px;
+      }
+
+      .content {
+         max-width: 600px;
+         margin: 36px auto;
+         font-size: 1em;
+         padding: 24px;
+      }
+
+      .content p {
+        margin-top: 12px;
+      }
+
+      .content li {
+        padding: 12px 0;
+      }
+
+      .circle-outer {
+        border-radius: 99px;
+        width: 14px;
+        height: 14px;
+        position: relative;
+        display: inline-block;
+      }
+
+      .circle-inner {
+        border-radius: 99px;
+        width: 10px;
+        height: 10px;
+        top: 2px;
+        left: 2px;
+        background: white;
+        position: relative;
+      }
+
+      .circle-green {
+        background: #1cbf7e;
+      }
+
+      .circle-red {
+        background: #ef3b13;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h2>
+        <img src="/brandmark-dark.png" class="brand-icon" />
+        ConsignCloud Status Page
+      </h2>
+    </div>
+    <div class="content">
+      <h3>
+        <div class="circle-outer circle-green">
+          <div class="circle-inner"></div>
+        </div>
+        ConsignCloud is up and running normally.
+      </h3>
+      <p>
+        If you're experiencing issues with the site, please contact support
+        using the chat widget below.
+      </p>
+    </div>
+    <div class="content hidden">
+      <h3>
+        <div class="circle-outer circle-red">
+          <div class="circle-inner"></div>
+        </div>
+        ConsignCloud is experiencing technical difficulties.
+      </h3>
+      <p>
+        Our team is aware of the outage and is working on a resolution.
+      </p>
+      <ul>
+        <li>
+          <strong>6:05 Pacific Time</strong> -
+          Service to our database has been restored. AWS outage continues, so we may
+          experience further interruptions, but for now our outage has been resolved.
+        </li>
+        <li>
+          <strong>5:20 Pacific Time</strong> -
+          Our team became aware of the outage. Our upstream service provider, Heroku,
+          is hosted using Amazon Web Services, who had an outage of their elastic compute
+          platform beginning at 4:35 AM PST. This caused our database to become temporarily
+          unavailable.
+        </li>
+      </ul>
+    </div>
+    <script>
+      var APP_ID = 'j1crenly';
+      window.intercomSettings = {
+        app_id: APP_ID,
+      };
+      (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/' + APP_ID;var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+    </script>
+  </body>
+</html>
