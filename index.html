@@ -17,10 +17,6 @@
       	vertical-align: baseline;
       }
 
-      body {
-      	line-height: 1;
-      }
-
       table {
       	border-collapse: collapse;
       	border-spacing: 0;
@@ -48,8 +44,9 @@
       .content {
          max-width: 600px;
          margin: 36px auto;
-         font-size: 14px;
+         font-size: 16px;
          padding: 24px;
+         line-height: 1.5em;
       }
 
       .content p {
@@ -122,14 +119,30 @@
         For more information, please visit <a href="https://status.heroku.com/">Heroku's status page</a>.
       <ul>
         <li>
-          <strong>8:53 Pacific Time</strong> -
-          The issue appears to be resolved. Heroku is still reporting an outage, so connectivity may be
-          intermittent for a bit.
+          <strong>10:01 PM Pacific Time</strong> -
+          The outage has been resolved by our service provider. We are now rolling back our DNS
+          workaround. There may be some more downtime temporarily while DNS records update.
+          In the meantime, you may be able to
+          use <a href="https://consigncloud-client-production.herokuapp.com" target="_blank">this link</a> to
+          access the software.
         </li>
         <li>
-          <strong>8:40 Pacific Time</strong> -
+          <strong>5:11 PM Pacific Time</strong> -
+          Our DNS workaround is taking effect. While the outage still continues, service should be
+          restored at this point. We will be monitoring the outage and rolling back our DNS workaround
+          once the underlying service becomes available again.
+        </li>
+        <li>
+          <strong>5:11 PM Pacific Time</strong> -
+          We have implemented a partial work around by  updating our DNS records to point directly to our
+          servers. It can take some time for this kind of DNS change to become widely available, but you
+          may be able to get access to it
+          by <a href="https://phoenixnap.com/kb/how-to-flush-dns-cache" target="_blank">flushing your DNS cache</a>.
+        </li>
+        <li>
+          <strong>4:32 PM Pacific Time</strong> -
           Our team became aware of the outage. It appears that our upstream service provider,
-          Heroku, (in turn hosted using Amazon Web Services) is unable to connect users with applications.
+          Heroku, (in turn hosted using Amazon Web Services) is investigating an issue with their DNS provider.
           This has caused our application to become temporarily unavailable.
         </li>
       </ul>
